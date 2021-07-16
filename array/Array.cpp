@@ -107,14 +107,16 @@ int main(){
 	arr.insert(0,19);
 	arr.insert(1,100);
 	arr.insert(2,300);
-
+	arr.insert(3,100);
+	arr.insert(5,1002);
 	arr.remove(1);
 
-	cout<<arr.empty()<<'\n'; // 1 -> true 
 
-	cout<<arr.get_max_size()<<endl;// 10
+	cout<<"isEmpty: "<<arr.empty()<<'\n'; // 1 -> true 
 
-	cout<<arr.get_size()<<endl; // 0 
+	cout<<"max size: "<<arr.get_max_size()<<endl;// 10
+
+	cout<<"current size: "<<arr.get_size()<<endl; // 0 
 
 	arr.print();
 
