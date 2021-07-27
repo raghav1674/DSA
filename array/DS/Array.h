@@ -22,6 +22,9 @@ private:
 
 	bool __check_if_sorted();
 
+	void __merge_sort_recursive(int,int);
+	void __merge(int,int,int);
+
 public:
 	Array(int given_size)
 	{
@@ -68,4 +71,10 @@ public:
 	void selection_sort();
 
 	void quick_sort();
+
+	void merge_sort();
+
+	
+
+	
 };

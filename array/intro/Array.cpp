@@ -2,6 +2,7 @@
 #include <climits>
 using namespace std;
 
+
 class Array
 {
 
