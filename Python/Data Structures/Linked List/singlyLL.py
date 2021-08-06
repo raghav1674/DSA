@@ -61,7 +61,7 @@ class singlyLinkedList:
         return "The value does not exist in the list!!"
     
     def deleteNode(self, nodeValue):
-        if self.head.next is None:
+        if self.head.next is None:    # Or, if self.head == self.tail:
             self.head = None
             self.tail = None
         elif self.head.value == nodeValue:
@@ -69,38 +69,39 @@ class singlyLinkedList:
         else:
             tempNode = self.head
             while tempNode is not None:
+                currentNode = tempNode
                 tempNode = tempNode.next
-                if tempNode.next.value == nodeValue:
-                    tempNode.next = tempNode.next.next
+                if tempNode.value == nodeValue:
+                    currentNode.next = tempNode.next
                     return 
 
 
-#   1 2 3 4
-#   0 1 2 3
-    # def deleteNode(self, location):
-    #     if self.head is None:
-    #         print("Singly Linked List Is Empty!!")
-    #     elif self.head.next is None:
-    #         self.head = None
-    #         self.tail = None
-    #     elif location == 0:
-    #         self.head = self.head.next
-    #     else:
-    #         tempNode = self.head
-    #         index = 0
-    #         while index < location - 1:
-    #             tempNode = tempNode.next
-    #             index += 1
-    #         nextNode = tempNode.next.next
-    #         tempNode.next = nextNode
+# #   1 2 3 4
+# #   0 1 2 3
+#     def deleteNode(self, location):
+#         if self.head is None:
+#             print("Singly Linked List Is Empty!!")
+#         elif self.head.next is None:
+#             self.head = None
+#             self.tail = None
+#         elif location == 0:
+#             self.head = self.head.next
+#         else:
+#             tempNode = self.head
+#             index = 0
+#             while index < location - 1:
+#                 tempNode = tempNode.next
+#                 index += 1
+#             nextNode = tempNode.next.next
+#             tempNode.next = nextNode
     
             
 
 SLinkedList = singlyLinkedList()
-SLinkedList.insertNode(1,0)
-SLinkedList.insertNode(2,1)
-SLinkedList.insertNode(3,2)
-SLinkedList.insertNode(4,3)
+SLinkedList.insertNode(2,0)
+SLinkedList.insertNode(3,1)
+SLinkedList.insertNode(1,2)
+SLinkedList.insertNode(7,3)
 # SLinkedList.insertNode(5,4)
 # SLinkedList.insertNode(6,5)
 # SLinkedList.insertNode(7,6)
