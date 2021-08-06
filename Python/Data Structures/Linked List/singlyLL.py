@@ -40,6 +40,28 @@ class singlyLinkedList:
                 if tempNode == self.tail:
                     self.tail = newNode
 
+    def traverseSLL(self):
+            if self.head is None:
+                print("Singly Linked List Is Empty!!")
+            else:
+                node = self.head
+                while node is not None:
+                    print(node.value, end=" ")
+                    node = node.next
+
+    def searchElement(self, nodeValue):
+        if self.head is None:
+            print("Singly Linked List Is Empty!!")
+        else:
+            node = self.head
+            while node is not None:
+                if node.value == nodeValue:
+                    return str(node.value) + ": Value Found!!"
+                node = node.next
+        return "The value does not exist in the list!!"
+                
+
+
 
 SLinkedList = singlyLinkedList()
 SLinkedList.insertNode(1,0)
@@ -49,4 +71,6 @@ SLinkedList.insertNode(4,3)
 SLinkedList.insertNode(5,4)
 SLinkedList.insertNode(6,4)
 
-print([node.value for node in SLinkedList])
+# SLinkedList.traverseSLL()
+print(SLinkedList.searchElement(6))
+# print([node.value for node in SLinkedList])
