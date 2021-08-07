@@ -94,7 +94,13 @@ class singlyLinkedList:
 #                 index += 1
 #             nextNode = tempNode.next.next
 #             tempNode.next = nextNode
-    
+
+    def deleteEntireSLL(self):
+        if self.head is None:
+            print("Singly Linked List Is Empty!!")
+        else:
+            self.head = None
+            self.tail = None
             
 
 SLinkedList = singlyLinkedList()
@@ -102,9 +108,9 @@ SLinkedList.insertNode(2,0)
 SLinkedList.insertNode(3,1)
 SLinkedList.insertNode(1,2)
 SLinkedList.insertNode(7,3)
-# SLinkedList.insertNode(5,4)
-# SLinkedList.insertNode(6,5)
-# SLinkedList.insertNode(7,6)
+SLinkedList.insertNode(5,4)
+SLinkedList.insertNode(6,5)
+SLinkedList.insertNode(7,6)
 # SLinkedList.insertNode(8,7)
 # SLinkedList.insertNode(9,8)
 # SLinkedList.insertNode(10,9)
@@ -115,11 +121,12 @@ print([node.value for node in SLinkedList])
 
 # SLinkedList.traverseSLL()
 # print(SLinkedList.searchElement(6))
-SLinkedList.deleteNode(2)
+# SLinkedList.deleteNode(2)
 # SLinkedList.deleteNode(2)
 # SLinkedList.deleteNode(4)
 # SLinkedList.deleteNode(6)
 # SLinkedList.deleteNode(8)
 # SLinkedList.deleteNode(10)
+SLinkedList.deleteEntireSLL()
 print("List After Deleting: ", end=" ")
 print([node.value for node in SLinkedList])
